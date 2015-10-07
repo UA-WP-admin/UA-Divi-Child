@@ -38,6 +38,8 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
 			<!-- begin modification -->
 
 			<?php if( get_theme_mod('footer_nav_position', 'above') == 'above' ) { get_sidebar( 'footer' ); } ?>
+				
+			<?php do_action('tr_footer_notification_area'); ?>
 
 			<!-- end modification -->
 

@@ -12,7 +12,7 @@ Child theme for Elegant Themes' Divi. These templates are meant to accompany the
 
 == Description ==
 
-This is the long description.  No limit, and you can use Markdown (as well as in the following sections).
+This Divi Child Theme adds addtional action hooks to the header, footer, and sidebar templates. 
 
 
 == Installation ==
@@ -23,13 +23,8 @@ This is the long description.  No limit, and you can use Markdown (as well as in
 
 == Changelog ==
 
-* List versions from most recent at top to oldest at bottom.
+= 1.1.0 =
+* Added addtional action hook to footer area.
 
 = 1.0.0 =
 * Initial release version
-
-
-== Upgrade Notice ==
-
-= 1.0.? =
-Upgrade notices describe the reason a user should upgrade.  No more than 300 characters.
