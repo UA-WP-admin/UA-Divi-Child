@@ -1,0 +1,37 @@
+/* Custom CSS for Tribe Events Plugin */
+
+.tribe-events-page-template #main-content .container:before {
+ 	content: none;
+}
+
+#main-content .tribe-events-list-widget .widgettitle {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+#main-content .tribe-events-list-widget-events .entry-title {
+ 	font-size: 1em; 
+  	padding-bottom: 0;
+}
+
+#main-content .tribe-events-list-widget-events .duration {
+ 	font-size: 0.8em; 
+}
+
+#main-content .tribe-events-list-widget ol {
+  padding: 0;
+}
+
+.tribe-events-list-widget ol li {
+  margin-bottom: 1em;
+}
+
+#main-content .tribe-events-widget-link a:hover, a.more-link:hover {
+  text-decoration: underline; 
+}
+#tribe-events-content {
+  margin-bottom: 0;
+}
+.tribe-events-button {
+  margin-bottom: 1.2em;  
+}
