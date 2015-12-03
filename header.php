@@ -121,7 +121,7 @@
  				<header id="main-header" data-height-onload="<?php echo esc_attr( et_get_option( 'menu_height', '66' ) ); ?>" class="<?php if( function_exists('tr_branding_class') ){ tr_branding_class(); } ?>">
 					<div class="container clearfix et_menu_container">
 
-						<?php tr_get_additional_header_content(); ?>
+						<?php if(function_exists('tr_get_additional_header_content')) { tr_get_additional_header_content(); } ?>
 
 			<?php 
 			} else { ?>
@@ -142,20 +142,15 @@
 				</div>
 
 			<?php 
-			}
-
-		?>
-
+			} ?>
 					<!-- <div id="et-top-navigation"> -->
-
+						
 				<?php
 					$menuClass = 'nav';
 					if ( 'on' == et_get_option( 'divi_disable_toptier' ) ) $menuClass .= ' et_disable_top_tier';
 					$primaryNav = '';
 					$primaryNav = wp_nav_menu( array( 'theme_location' => 'primary-menu', 'container' => '', 'fallback_cb' => '', 'menu_class' => $menuClass, 'menu_id' => 'top-menu', 'echo' => false ) );
 				
-
-
 					if ( has_nav_menu( 'secondary-menu') || '' != $primaryNav) 
 					{
 					     $top_nav_class = 'tr-has-nav';
@@ -194,9 +189,8 @@
 						<?php do_action( 'et_header_top' ); ?>
 					
 				</div> <!-- #et-top-navigation -->
-
-
 			</div> <!-- .container -->
+			
 			<div class="et_search_outer">
 				<div class="container et_search_form_container">
 					<form role="search" method="get" class="et-search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
@@ -216,7 +210,6 @@
 		<div id="et-main-area">
 
 			<!-- begin customization -->
-			<?php if(class_exists('Division')) { tr_main_menu(); } ?>
-			<!-- end customization -->		
-
-
+			<?php if(class_exists('Division') && function_exists('tr_main_menu')) { tr_main_menu(); } ?>
+			<!-- end customization -->
+			
