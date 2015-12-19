@@ -12,7 +12,7 @@ if(class_exists('Division'))
 	else
 	{
 		$the_sidebar = get_post_meta( get_the_ID(), '_tr_custom_sidebar', true );
-		$tr_sidebar = ( isset($the_sidebar) && $the_sidebar !== '') ? $the_sidebar : 'sidebar-1';		
+		$tr_sidebar = ( isset($the_sidebar) && $the_sidebar !== '') ? $the_sidebar : false;		
 	}
 
 	if ( is_active_sidebar( $tr_sidebar ) ) :
