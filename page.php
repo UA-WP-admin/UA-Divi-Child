@@ -4,7 +4,9 @@ get_header();
 
 $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 $divi_page_layout = get_post_meta( get_the_ID(), '_et_pb_page_layout', true );
-$has_page_sidebar = ( isset($divi_page_layout) && 'et_full_width_page' !==  $divi_page_layout ) ? true : false;
+$the_sidebar = get_post_meta( get_the_ID(), '_tr_custom_sidebar', true );
+$tr_sidebar = ( isset($the_sidebar) && $the_sidebar !== '' ) ? $the_sidebar : false;	
+$has_page_sidebar = ( isset($divi_page_layout) && 'et_full_width_page' !==  $divi_page_layout && $tr_sidebar ) ? true : false;
 ?>
 
 <div id="main-content">
